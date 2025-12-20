@@ -23,15 +23,13 @@ Hooks.once("init", () => {
   CONFIG.Item.documentClass = RuneItem;
   
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("rune", RuneActorSheet, { 
+  DocumentSheetConfig.registerSheet(Actor, "rune", RuneActorSheet, { 
     types: ["character", "npc", "creature"],
     makeDefault: true,
     label: "RUNE Character Sheet"
   });
   
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("rune", RuneItemSheet, {
+  DocumentSheetConfig.registerSheet(Item, "rune", RuneItemSheet, {
     types: ["equipment", "weapon", "armor", "spell", "trait"],
     makeDefault: true,
     label: "RUNE Item Sheet"
