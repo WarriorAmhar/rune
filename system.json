@@ -1,0 +1,51 @@
+{
+  "id": "rune",
+  "title": "RUNE - Runeterra OSR",
+  "description": "An OSR-style tabletop RPG system set in the League of Legends/Runeterra/Arcane universe.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 12
+  },
+  "authors": [{
+    "name": "Ruy Leon",
+    "discord": "ruyleon"
+  }],
+  "esmodules": ["rune.mjs"],
+  "styles": ["styles/rune.css"],
+  "packs": [],
+  "languages": [{
+    "lang": "en",
+    "name": "English",
+    "path": "lang/en.json"
+  }],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": ["biography"]
+      },
+      "npc": {
+        "htmlFields": ["biography"]
+      },
+      "creature": {
+        "htmlFields": ["biography"]
+      }
+    },
+    "Item": {
+      "equipment": {},
+      "weapon": {},
+      "armor": {},
+      "spell": {},
+      "trait": {}
+    }
+  },
+  "initiative": "2d6",
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "stamina",
+  "url": "https://github.com/yourusername/rune-fvtt",
+  "manifest": "https://github.com/yourusername/rune-fvtt/releases/latest/download/system.json",
+  "download": "https://github.com/yourusername/rune-fvtt/releases/latest/download/rune.zip"
+}
