@@ -1,0 +1,146 @@
+{
+  "RUNE": {
+    "SystemTitle": "RUNE - Runeterra OSR",
+    
+    "Approaches": {
+      "Might": "Might",
+      "Guile": "Guile",
+      "Vision": "Vision",
+      "MightDesc": "Strength, vigor, health, constitution, resistance, brutality, violence, combat",
+      "GuileDesc": "Dexterity, agility, precision, charisma, stealth, persuasion, illusion, deception",
+      "VisionDesc": "Will, perception, magic, occult, intellect, knowledge, wisdom, strategy"
+    },
+    
+    "Attributes": {
+      "Stamina": "Stamina",
+      "StaminaCurrent": "Current Stamina",
+      "StaminaMax": "Maximum Stamina",
+      "Armor": "Armor",
+      "MagicResist": "Magic Resistance",
+      "Level": "Level",
+      "Experience": "Experience"
+    },
+    
+    "ActorTypes": {
+      "Character": "Player Character",
+      "Npc": "Non-Player Character",
+      "Creature": "Creature"
+    },
+    
+    "ItemTypes": {
+      "Equipment": "Equipment",
+      "Weapon": "Weapon",
+      "Armor": "Armor",
+      "Spell": "Spell",
+      "Trait": "Trait"
+    },
+    
+    "Actions": {
+      "RollCheck": "Roll Check",
+      "RollAttack": "Roll Attack",
+      "ApplyDamage": "Apply Damage",
+      "Heal": "Heal",
+      "ToggleEquipped": "Toggle Equipped",
+      "Edit": "Edit",
+      "Delete": "Delete"
+    },
+    
+    "CheckResults": {
+      "Glory": "GLORY!",
+      "Ruin": "RUIN!",
+      "Success": "SUCCESS!",
+      "Complication": "COMPLICATION",
+      "Failure": "FAILURE",
+      "GloryDesc": "The character must be rewarded appropriately!",
+      "RuinDesc": "Suffer all consequences and a major disaster!",
+      "SuccessDesc": "The action succeeds without problem.",
+      "ComplicationDesc": "Partially successful. Something goes wrong.",
+      "FailureDesc": "Suffer all of the action's consequences."
+    },
+    
+    "Combat": {
+      "Attack": "Attack",
+      "Hit": "HIT!",
+      "Miss": "MISS",
+      "Blocked": "BLOCKED",
+      "Damage": "Damage",
+      "Physical": "Physical",
+      "Magical": "Magical"
+    },
+    
+    "Equipment": {
+      "Equipped": "Equipped",
+      "Unequipped": "Unequipped",
+      "Quantity": "Quantity",
+      "WeaponType": "Weapon Type",
+      "ArmorType": "Armor Type",
+      "ArmorValue": "Armor Value",
+      "MagicResistValue": "Magic Resistance Value"
+    },
+    
+    "WeaponTypes": {
+      "Melee": "Melee",
+      "Ranged": "Ranged",
+      "Magic": "Magic"
+    },
+    
+    "ArmorTypes": {
+      "Light": "Light",
+      "Medium": "Medium",
+      "Heavy": "Heavy",
+      "Shield": "Shield"
+    },
+    
+    "CreatureTypes": {
+      "Common": "Common",
+      "Elite": "Elite",
+      "Boss": "Boss",
+      "Legendary": "Legendary"
+    },
+    
+    "TraitTypes": {
+      "Advantage": "Advantage",
+      "Background": "Background",
+      "Feature": "Feature",
+      "Flaw": "Flaw"
+    },
+    
+    "Spells": {
+      "School": "School of Magic",
+      "CastingTime": "Casting Time",
+      "Range": "Range",
+      "Duration": "Duration"
+    },
+    
+    "Disposition": {
+      "Friendly": "Friendly",
+      "Neutral": "Neutral",
+      "Hostile": "Hostile"
+    },
+    
+    "Sheet": {
+      "Biography": "Biography",
+      "Description": "Description",
+      "Items": "Items",
+      "Features": "Features",
+      "Equipment": "Equipment",
+      "Spells": "Spells",
+      "Traits": "Traits",
+      "Notes": "Notes",
+      "SpecialAbilities": "Special Abilities",
+      "GrantsAdvantage": "Grants Advantage",
+      "AdvantageConditions": "Advantage Conditions"
+    },
+    
+    "Warnings": {
+      "StaminaDepleted": "STAMINA DEPLETED! Next hit is lethal!",
+      "PCArmorLimit": "Player Characters are limited to 3 Armor from equipment",
+      "PCMagicResistLimit": "Player Characters are limited to 3 Magic Resistance from equipment"
+    },
+    
+    "Settings": {
+      "PublicRolls": "Public Rolls by Default",
+      "PublicRollsHint": "Whether rolls should be public by default or private (GM only)"
+    }
+  }
+}
