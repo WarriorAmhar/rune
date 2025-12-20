@@ -45,7 +45,7 @@
     "units": "ft"
   },
   "primaryTokenAttribute": "stamina",
-  "url": "https://github.com/yourusername/rune-fvtt",
-  "manifest": "https://github.com/yourusername/rune-fvtt/releases/latest/download/system.json",
-  "download": "https://github.com/yourusername/rune-fvtt/releases/latest/download/rune.zip"
+  "url": "https://github.com/WarriorAmhar/rune",
+  "manifest": "https://github.com/WarriorAmhar/rune/releases/latest/download/system.json",
+  "download": "https://github.com/WarriorAmhar/rune/releases/latest/download/rune.zip"
 }
