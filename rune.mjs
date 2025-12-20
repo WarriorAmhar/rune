@@ -25,14 +25,16 @@ Hooks.once("init", () => {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("rune", RuneActorSheet, { 
+    types: ["character", "npc", "creature"],
     makeDefault: true,
-    label: "RUNE.SheetClassCharacter"
+    label: "RUNE Character Sheet"
   });
   
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("rune", RuneItemSheet, {
+    types: ["equipment", "weapon", "armor", "spell", "trait"],
     makeDefault: true,
-    label: "RUNE.SheetClassItem"
+    label: "RUNE Item Sheet"
   });
   
   // Configure Data Models for Actor sub-types
