@@ -1,0 +1,121 @@
+<form class="{{cssClass}} rune-item-sheet" autocomplete="off">
+  <header class="sheet-header">
+    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" alt="{{item.name}}" />
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Nome do Item" />
+      </h1>
+      <div class="item-type">{{capitalize item.type}}</div>
+    </div>
+  </header>
+
+  <section class="sheet-body">
+    <!-- Description -->
+    <div class="form-group">
+      <label>Descrição</label>
+      <div class="editor">
+        {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+
+    <!-- Common Fields -->
+    <div class="form-group">
+      <label>Quantidade</label>
+      <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+    </div>
+
+    <!-- Equipment/Weapon/Armor Specific -->
+    {{#if (or (eq item.type "equipment") (eq item.type "weapon") (eq item.type "armor"))}}
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="system.equipped" {{checked system.equipped}} />
+          Equipado
+        </label>
+      </div>
+    {{/if}}
+
+    <!-- Weapon Specific -->
+    {{#if (eq item.type "weapon")}}
+      <div class="form-group">
+        <label>Tipo de Arma</label>
+        <select name="system.weaponType">
+          <option value="melee" {{#if (eq system.weaponType "melee")}}selected{{/if}}>Corpo a Corpo</option>
+          <option value="ranged" {{#if (eq system.weaponType "ranged")}}selected{{/if}}>Distância</option>
+          <option value="magic" {{#if (eq system.weaponType "magic")}}selected{{/if}}>Mágica</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Notas de Dano</label>
+        <input type="text" name="system.damageNote" value="{{system.damageNote}}" />
+      </div>
+    {{/if}}
+
+    <!-- Armor Specific -->
+    {{#if (eq item.type "armor")}}
+      <div class="form-group">
+        <label>Tipo de Armadura</label>
+        <select name="system.armorType">
+          <option value="light" {{#if (eq system.armorType "light")}}selected{{/if}}>Leve</option>
+          <option value="medium" {{#if (eq system.armorType "medium")}}selected{{/if}}>Média</option>
+          <option value="heavy" {{#if (eq system.armorType "heavy")}}selected{{/if}}>Pesada</option>
+          <option value="shield" {{#if (eq system.armorType "shield")}}selected{{/if}}>Escudo</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Valor de Armadura</label>
+        <input type="number" name="system.armorValue" value="{{system.armorValue}}" data-dtype="Number" min="0" max="3" />
+        <p class="hint">PCs limitados a 3</p>
+      </div>
+      <div class="form-group">
+        <label>Valor de Resistência Mágica</label>
+        <input type="number" name="system.magicResistValue" value="{{system.magicResistValue}}" data-dtype="Number" min="0" max="3" />
+        <p class="hint">PCs limitados a 3</p>
+      </div>
+    {{/if}}
+
+    <!-- Spell Specific -->
+    {{#if (eq item.type "spell")}}
+      <div class="form-group">
+        <label>Escola de Magia</label>
+        <input type="text" name="system.spellSchool" value="{{system.spellSchool}}" placeholder="Invocação, Ilusão, etc." />
+      </div>
+      <div class="form-group">
+        <label>Tempo de Conjuração</label>
+        <input type="text" name="system.castingTime" value="{{system.castingTime}}" />
+      </div>
+      <div class="form-group">
+        <label>Alcance</label>
+        <input type="text" name="system.range" value="{{system.range}}" />
+      </div>
+      <div class="form-group">
+        <label>Duração</label>
+        <input type="text" name="system.duration" value="{{system.duration}}" />
+      </div>
+    {{/if}}
+
+    <!-- Trait Specific -->
+    {{#if (eq item.type "trait")}}
+      <div class="form-group">
+        <label>Tipo de Trait</label>
+        <select name="system.traitType">
+          <option value="advantage" {{#if (eq system.traitType "advantage")}}selected{{/if}}>Vantagem</option>
+          <option value="background" {{#if (eq system.traitType "background")}}selected{{/if}}>Antecedente</option>
+          <option value="feature" {{#if (eq system.traitType "feature")}}selected{{/if}}>Característica</option>
+          <option value="flaw" {{#if (eq system.traitType "flaw")}}selected{{/if}}>Defeito</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="system.grantsAdvantage" {{checked system.grantsAdvantage}} />
+          Concede Vantagem em Testes
+        </label>
+      </div>
+      {{#if system.grantsAdvantage}}
+        <div class="form-group">
+          <label>Condições para Vantagem</label>
+          <input type="text" name="system.advantageConditions" value="{{system.advantageConditions}}" placeholder="Quando escalar, quando em combate, etc." />
+        </div>
+      {{/if}}
+    {{/if}}
+  </section>
+</form>
