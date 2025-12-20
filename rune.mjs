@@ -29,6 +29,12 @@ Hooks.once("init", () => {
     label: "RUNE.SheetClassCharacter"
   });
   
+  Items.unregisterSheet("core", ItemSheet);
+  Items.registerSheet("rune", RuneItemSheet, {
+    makeDefault: true,
+    label: "RUNE.SheetClassItem"
+  });
+  
   // Configure Data Models for Actor sub-types
   CONFIG.Actor.dataModels = {
     character: CharacterDataModel,
