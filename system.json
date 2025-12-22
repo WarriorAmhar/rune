@@ -2,7 +2,7 @@
   "id": "rune",
   "title": "RUNE",
   "description": "An OSR-style tabletop RPG system set in the League of Legends/Runeterra/Arcane universe.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "compatibility": {
     "minimum": 12,
     "verified": 13
