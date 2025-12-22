@@ -181,9 +181,12 @@ export class RuneActorSheet extends ActorSheet {
     const header = event.currentTarget;
     const type = header.dataset.type;
     
+    // Capitalize the type name
+    const typeName = type.charAt(0).toUpperCase() + type.slice(1);
+    
     // Prepare item data
     const itemData = {
-      name: `Novo ${type.capitalize()}`,
+      name: `Novo ${typeName}`,
       type: type,
       system: {}
     };
@@ -219,6 +222,9 @@ export class RuneActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const approach = element.dataset.approach;
     
+    // Capitalize the approach name for display
+    const approachName = approach.charAt(0).toUpperCase() + approach.slice(1);
+    
     // Ask for advantage/disadvantage
     const dialogContent = `
       <form>
@@ -236,7 +242,7 @@ export class RuneActorSheet extends ActorSheet {
     `;
     
     new Dialog({
-      title: `Rolar ${approach.capitalize()}`,
+      title: `Rolar ${approachName}`,
       content: dialogContent,
       buttons: {
         roll: {
@@ -280,8 +286,3 @@ export class RuneActorSheet extends ActorSheet {
     ChatMessage.create(messageData);
   }
 }
-
-// Helper to capitalize strings
-String.prototype.capitalize = function() {
-  return this.charAt(0).toUpperCase() + this.slice(1);
-};
